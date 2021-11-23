@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 
 using namespace std;
+
+// Use Binary Search
 int first_occurence(int arr[],int n,int x)
 {
     if(arr[0]==x)
