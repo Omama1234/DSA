@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int m=INT_MIN;
+int flag=0;
+
+int main()
+{
+    int arr[]={1,5,6,7,8,-9,-5};
+    int L=-6;
+    int R=-5;
+   // sort(arr,arr+5);
+    for(int i=0;i<7;i++){
+        for(int j=i+1;j<7;j++)
+        {
+            if(arr[i]==-arr[j])
+            {
+                if((arr[i]>=L && arr[i]<=R))
+                {
+                   m=max(m,arr[i]); 
+                   flag=1;
+                }
+                if(arr[j]>=L && arr[j]<=R)
+                {
+                    m=max(m,arr[j]);
+                    flag=1;
+                }
+            }
+        }
+    }
+    if(flag==0)
+    {
+        cout<<"0"<<endl;
+    }
+    else
+    {
+        cout<<m<<endl;
+    }
+
+    return 0;
+}
