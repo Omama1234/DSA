@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int sqRootFloor(int x)
+{
+    int low=1;
+    int high=x;
+    int ans=-1;
+    while(low<=high)
+    {
+        int mid=(low+high)/2;
+        int mdsq=mid*mid;
+        if(mdsq==x)
+        {
+            return mid;
+        }
+        else if(mdsq>x)
+        {
+            high=mid-1;
+
+        }
+        else
+        {
+            low=mid+1;
+            ans=mid;
+        }
+    }
+    return ans;
+}
+int main()
+{
+    int n;
+    cout<<"Enter the value of n -> ";
+    cin>>n;
+    cout<<"floor of sqrt("<<n<<") -> "<<sqRootFloor(n)<<endl;
+}
