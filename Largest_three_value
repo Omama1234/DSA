@@ -1,0 +1,45 @@
+/*Find the largest Three elements in the array*/
+
+// T.C ->O(n)
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int max1=INT_MIN;
+    int max2=INT_MIN;
+    int max3=INT_MIN;
+    cout<<"Enter the size of array ->";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the value of arr["<<i<<"]=";
+        cin>>arr[i];
+    }
+    max1=*max_element(arr,arr+n);
+    cout<<"First Largest ->"<<max1<<endl;
+    
+    for(int i=0;i<n;i++)
+    {
+        if(max2<arr[i] && arr[i]!=max1)
+        {
+            max2=arr[i];
+        }
+    }
+    cout<<"Second Largest ->"<<max2<<endl;
+    
+    for(int i=0;i<n;i++)
+    {
+        if(max3<arr[i] && arr[i]!=max1 && arr[i]!=max2)
+        {
+            max3=arr[i];
+        }
+    }
+    cout<<"Third Largest ->"<<max3<<endl;
+
+    return 0;
+}
