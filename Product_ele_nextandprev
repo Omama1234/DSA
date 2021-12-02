@@ -1,0 +1,39 @@
+/* Write a C++ program to update every array element by multiplication of 
+next and previous values of a given array of integers*/
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    // int max1=INT_MIN;
+    // int max2=INT_MIN;
+    // int max3=INT_MIN;
+    cout<<"Enter the size of array ->";
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the value of arr["<<i<<"]=";
+        cin>>arr[i];
+    }
+    //arr[0]=arr[1];
+    //arr[n-1]=arr[n-2];
+    int arr2[n];
+    arr2[0]=arr[0];
+    arr2[n-1]=arr[n-1];
+    
+    for(int i=1;i<n-1;i++)
+    {
+        arr2[i]=arr[i-1]*arr[i+1];
+    }
+    
+    for(const auto &x:arr2)
+    {
+        cout<<x<<" ";
+    }cout<<endl;
+    return 0;
+}
