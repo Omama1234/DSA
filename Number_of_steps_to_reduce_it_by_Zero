@@ -1,0 +1,33 @@
+/*Number of steps to Reduce a NUmber to a zero*/
+
+/*Given a num, return the number of steps to reduce it to zero.
+  In one step, if the current number is even ,you have to divid eit by 2,otherwise you have to subtract 1 from it.*/
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the number ->";
+    cin>>n;
+    int count=0;
+    int x=n;
+    while(n>0)
+    {
+        count++;
+        if(n%2==0)
+        {
+            n=n/2;
+        }
+        else
+        {
+            n=n-1;
+        }
+    }
+    cout<<"Number of steps to reduce the number "<<x<<" to Zero->"<<count<<endl;
+   
+
+    return 0;
+}
