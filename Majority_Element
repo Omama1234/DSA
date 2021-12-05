@@ -1,0 +1,35 @@
+/*Given a array A of N elements . Find the majority elemnent in the array.
+  - A majority element in an array A of Size N is an element that appears more than N/2 times in the array .
+
+
+*/
+// Brute force 
+// T.C->O(nlogn)
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    
+   int arr[]={3,1,3,3,2};
+   int n=5;
+   unordered_map<int,int>m;
+   
+   for(int i:arr)
+   {
+       m[i]++;
+   }
+   
+   for(int i:arr)
+   {
+       if(m[i]>=n/2)
+       {
+           cout<<m[i]<<endl;
+           m[i]=0;
+       }
+   }
+
+    return 0;
+}
