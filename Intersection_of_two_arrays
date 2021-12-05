@@ -1,0 +1,28 @@
+/*Intersection of two array of size n and m*/
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a[]={89,24,75,11,23};
+    int b[]={89,2,4};
+    int n=5;
+    int m=3;
+    
+    int i=0;
+    int j=0;
+    
+    while(i<n && j<m)
+    {
+        if(a[i]==b[j])
+        {
+            cout<<a[i]<<" ";
+        }
+        i++;
+        j++;
+    }
+
+    return 0;
+}
